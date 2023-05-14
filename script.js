@@ -2,24 +2,40 @@
 
 function palindrome(str){
 
+	
+
 	let strJoin = str.split(' ').join('');
 
-let len = strJoin.length-1;
+	let isPalindrome = true;
+	let i = 0, j = strJoin.length-1;
 
-const answer = (strJoin, len) => {
+	while (i <= j && isPalindrome) {
+		if(strJoin[i] !== strJoin[j]){
+			isPalindrome = false;
+		}
+		i++;
+		j--;
+	}
+	
+	return isPalindrome;
 
-  let reverseString = "";
+	// console.log()
+// let len = strJoin.length-1;
 
-  // for(let i = strJoin.length - 1; i >= 0; i--){
-  //   reverseString += strJoin[i];
-  // }
+// const answer = (strJoin, len) => {
 
-   for (let i = len; i >= 0; i--) {
-    // Append the current character to the reversed string.
-    reversedStr += strJoin[i];
-  }
+//   let reverseString = "";
 
-  return (strJoin === reverseString);
+//   // for(let i = strJoin.length - 1; i >= 0; i--){
+//   //   reverseString += strJoin[i];
+//   // }
+
+//    for (let i = len; i >= 0; i--) {
+//     // Append the current character to the reversed string.
+//     reversedStr += strJoin[i];
+//   }
+
+//   return (strJoin === reverseString);
 	
 }
 module.exports = palindrome
