@@ -4,7 +4,7 @@ function palindrome(str){
 
 	
 
-	let strJoin = str.split(' ').join('');
+	let strJoin = str.split(' ').join('').toLowerCase();
 
 	let isPalindrome = true;
 	let i = 0, j = strJoin.length-1;
